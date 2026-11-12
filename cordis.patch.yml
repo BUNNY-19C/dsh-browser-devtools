@@ -1,0 +1,31 @@
+- insert:
+    - id: browser-devtools-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: browser
+        transport: stdio
+        command: C:\Program Files\nodejs\node.exe
+        args:
+          - G:\DSH\superagent-state\dsh-browser-devtools\server\node_modules\chrome-devtools-mcp\out\Default\gen\src\bin\chrome-devtools-mcp.js
+          - --userDataDir=C:\Users\BUNNY\.dsh\browser-devtools\chrome-profile
+          - --viewport=1440x900
+          - --screenshotFormat=webp
+          - --screenshotMaxWidth=1440
+          - --allowUnrestrictedPaths
+          - --usageStatistics=false
+          - --performanceCrux=false
+        env:
+          CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS: '1'
+        toolCallTimeoutMs: 120000
+        startupTimeoutMs: 60000
+        failOnStartupError: true
+    - id: browser-devtools-user-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: chrome
+        transport: stdio
+        command: C:\Program Files\nodejs\node.exe
+        args:
+          - G:\DSH\superagent-state\dsh-browser-devtools\server\bridge.mjs
+        toolCallTimeoutMs: 120000
+        startupTimeoutMs: 30000
