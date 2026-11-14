@@ -19,10 +19,12 @@ Console and network capture starts when a tab is attached, so reload the page to
 
 ## Install
 
+Use a Node.js version supported by the bundled `chrome-devtools-mcp` dependency (Node.js 20.19+ on the 20.x line, 22.12+ on the 22.x line, or 23+).
+
 1. Install dependencies:
-   ```
+   ```sh
    cd server
-   npm install
+   npm ci
    ```
 2. Edit the absolute paths in `cordis.patch.yml` (`node.exe`, `bridge.mjs`, `chrome-devtools-mcp.js`, `--userDataDir`) to match your machine.
 3. Install the bundle in DSH: **Plugins** > **Add plugin** and choose this directory, or call `plugin_manager install_bundle` with the absolute path.

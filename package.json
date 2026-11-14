@@ -1,9 +1,9 @@
 {
   "name": "@local/browser-devtools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "exports": { "./locale/*.json": "./locale/*.json", "./icon": "./icon.svg" },
-  "files": ["cordis.patch.yml", "locale/*.json", "icon.svg", "ext-key.json", "extension", "server/package.json", "server/bridge.mjs", "server/make-manifest.mjs"],
+  "files": ["cordis.patch.yml", "locale/*.json", "icon.svg", "ext-key.json", "extension", "server/package.json", "server/package-lock.json", "server/bridge.mjs", "server/make-manifest.mjs"],
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
 }
